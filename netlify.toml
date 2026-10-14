@@ -1,0 +1,12 @@
+[build]
+  publish = "dist"
+  command = "test -f dist/index.html"
+
+[build.environment]
+  SKIP_INSTALL_DEPS = "true"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
